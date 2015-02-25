@@ -1,0 +1,27 @@
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'java'
+
+idea {
+    project {
+        languageLevel = '1.8'
+    }
+}
+
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.2.1'
+	distributionUrl = 'https://services.gradle.org/distributions/gradle-2.2.1-all.zip'
+}
+
+
+dependencies {
+    testCompile "junit:junit:4.12"
+}
+
+
