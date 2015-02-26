@@ -28,6 +28,10 @@ public class EqualityBuilder<T> {
         return compares(new EqualsCompareFieldsEquality<>(field));
     }
 
+    public EqualityBuilder<T> deepCompares(Function<T, int[]> intArrayField) {
+        return compares(new IntArrayDeepEquals<>(intArrayField));
+    }
+
     /**
      * Adds a custom equal/hashCode calculation which will be included in the overall calculations.
      */
@@ -42,4 +46,5 @@ public class EqualityBuilder<T> {
     public Equality<T> create() {
         return new TypeCheckingEqualityWrapper<>(type, equality);
     }
+
 }

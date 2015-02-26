@@ -19,7 +19,7 @@ package de.andrena.equalsBuilder;
  * }
  * </pre>
  *
- * The equality instance can be created using the {@link de.andrena.equalsBuilder.EqualityBuilder} wich can
+ * The equality instance can be created using the {@link EqualityBuilder} wich can
  * be created with the method {@link de.andrena.equalsBuilder.Equality#forClass(Class)}.
  */
 public interface Equality<T> {
