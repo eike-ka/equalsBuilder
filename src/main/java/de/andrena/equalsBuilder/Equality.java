@@ -28,9 +28,11 @@ public interface Equality<T> {
      * The equal implementation which is consistent to the {@link #hashCode(Object)}  method regarding the
      * equals-hashCode-contract.
      *
+     * @param thiz should pass this in the equals implementation of a class. Thiz must not be null
+     * @param other should pass the other argument of the equals implementation. This can also be null
      * @return if both arguments are equal
      */
-    abstract boolean areEqual(T thiz, Object that);
+    abstract boolean areEqual(T thiz, Object other);
 
     /**
      * calculates a hashCode which is consistent with the {@link #areEqual(Object, Object)} method regarding
